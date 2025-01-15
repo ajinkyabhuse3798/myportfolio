@@ -35,9 +35,9 @@ const projects = (await getCollection('work'))
 					align="start"
 				>
 					<div class="roles">
-						<Pill><Icon icon="code" size="1.33em" /> Developer</Pill>
-						<Pill><Icon icon="microphone-stage" size="1.33em" /> Speaker</Pill>
-						<Pill><Icon icon="pencil-line" size="1.33em" /> Writer</Pill>
+						<Pill><Icon icon="code" size="1.33em" /> Data analyst</Pill>
+						<Pill><Icon icon="bi-developer" size="1.33em" /> BI Developer</Pill>
+						<Pill><Icon icon="pencil-line" size="1.33em" /> Data Science</Pill>
 					</div>
 				</Hero>
 
@@ -81,23 +81,32 @@ const projects = (await getCollection('work'))
 
 			<section class="section with-background bg-variant">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Mentions</h3>
-					<p>
-						I have expertise using this tools.
-					</p>
+				  <h3>Skills & Expertise</h3>
+				  <p>
+					I have expertise using these tools.
+				  </p>
 				</header>
-
+			  
 				<div class="gallery">
-					<Grid variant="small">
-						{
-							['Python', 'Power Bi', 'AWS', 'SQL.', 'React'].map((brand) => (
-								<li class="mention-card">
-									<p>{brand}</p>
-								</li>
-							))
-						}
-					</Grid>
+				  <Grid variant="small">
+					{
+					  ['Python and R', 'Power Bi', 'AWS Lambda, EC2, S3', 'SQL', 'React','NLP, Machine Learning and AI','ETL and DAX','Data Governance & Compliance'].map((brand) => (
+						<li class="mention-card">
+						  <p class="mention-text">{brand}</p>
+						</li>
+					  ))
+					}
+				  </Grid>
 				</div>
+			  </section>
+			  
+			  <style>
+				.mention-text {
+				  font-weight: bold;
+				  font-size: 1.25rem; /* Slightly larger font size */
+				  text-align: center; /* Center align the text */
+				}
+			  </style>
 			</section>
 		</main>
 
